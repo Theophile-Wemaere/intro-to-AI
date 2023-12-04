@@ -7,6 +7,15 @@ def h(x):
     }
     return H[x] if x not in ("Start","Goal") else 0
 
+def build_path(current,previous,start):
+    path = []
+    while previous[current] != current:
+        path.append(current)
+        current = previous[current]
+    path.append(start)
+    path.reverse()
+    return path
+
 def a_star(start, stop, graph):
         # FRINGE are nodes spawned but not inspected and CLOSED are nodes inspected
         # we use set instead of list for easier access
@@ -32,12 +41,8 @@ def a_star(start, stop, graph):
 
             # is it the goal node ?
             if current == stop:
-                path = []
-                while previous[current] != current:
-                    path.append(current)
-                    current = previous[current]
-                path.append(start)
-                path.reverse()
+                path = build_path(current,previous,start)
+                print("\nOptimal path found : ",end ='')
                 print(' -> '.join(path))
                 return 0
 
@@ -48,6 +53,9 @@ def a_star(start, stop, graph):
                     FRINGE.add(node_name)
                     previous[node_name] = current
                     g[node_name] = g[current] + weight
+                    print("Examining : ",end='')
+                    print(" -> ".join(build_path(node_name,previous,start)))
+
 
                 else:
                     # check if it is worth it to visit the current neighbor (node_name)
@@ -58,7 +66,7 @@ def a_star(start, stop, graph):
                         if node_name in CLOSED:
                             CLOSED.remove(node_name)
                             FRINGE.add(node_name)
-
+                    
             # all neighbors have been inspected, remove it
             FRINGE.remove(current)
             CLOSED.add(current)
