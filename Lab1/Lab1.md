@@ -80,6 +80,9 @@ def a_star(start, goal, graph):
 
 ### Question 3. The implementation of the A* research method
 
+For this exercise, we're gonna work on the following graph:
+![[graph.png]]
+
 The following python script is an example of the A* algorithm implementation :
 ```python
 #!/usr/bin/python3
@@ -176,3 +179,5 @@ if __name__ == "__main__":
         exit(1)
 ```
 
+The output for the graph above is the following :
+![[output.png]]

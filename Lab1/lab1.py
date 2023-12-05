@@ -1,3 +1,4 @@
+#!/bin/python
 def h(x):
     H = {
     "A":2,
@@ -43,7 +44,7 @@ def a_star(start, stop, graph):
             if current == stop:
                 path = build_path(current,previous,start)
                 print("\nOptimal path found : ",end ='')
-                print(' -> '.join(path))
+                print(' -> '.join(path)+'\n')
                 return 0
 
             # get all neighbors of the current node 
