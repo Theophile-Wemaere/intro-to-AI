@@ -85,7 +85,7 @@ For this exercise, we're gonna work on the following graph:
 
 The following python script is an example of the A* algorithm implementation :
 ```python
-#!/usr/bin/python3
+#!/bin/python
 
 def h(x):
     H = {
