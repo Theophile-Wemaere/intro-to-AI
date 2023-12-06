@@ -78,7 +78,7 @@ def a_star(start, stop, graph):
 if __name__ == "__main__":
     try:
         graph = {
-            "Start":[("A",2),("B",3)],
+            "Start":[("A",2),("B",3),("D",5)],
             "A":[("Start",2),("C",4)],
             "B":[("Start",3),("D",4)],
             "C":[("A",4),("D",1),("Goal",2)],
