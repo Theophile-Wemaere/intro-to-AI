@@ -81,7 +81,7 @@ def a_star(start, goal, graph):
 ### Question 3. The implementation of the A* research method
 
 For this exercise, we're gonna work on the following graph:
-![[graph.png]]
+![[Lab1/images/graph.png]]
 
 The following python script is an example of the A* algorithm implementation :
 ```python

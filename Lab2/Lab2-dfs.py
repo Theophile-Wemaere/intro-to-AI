@@ -21,8 +21,6 @@ def dfs(graph,start,goal):
                 new_path.append(neighbor)
                 queue.append(new_path)
 
-    return visited
-
 graph = {
     'Start': ["A", "B", "D"],
     'A': ["Start", "C"],
