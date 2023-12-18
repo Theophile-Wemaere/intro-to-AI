@@ -62,6 +62,8 @@ independence is a broader concept that applies to any two events, regardless of 
 
 **Question 3**
 
+[0.92,0.88,0.79,0.73,0.22,0.08,0.17,0.03]
+[0.08,0.12,0.21,0.27,0.78,0.92,0.83,0.97]
 ### Part B
 
 
