@@ -41,5 +41,17 @@ bayesNet.add_cpds(cpd_I, cpd_L, cpd_S, cpd_R, cpd_N)
 bayesNet.check_model()
 
 solver = VariableElimination(bayesNet)
-result = solver.query(variables=['N'])
-print(result)
+
+# # Question 2
+# result = solver.query(variables=['N'])
+# print("P(N) :")
+# print(result)
+
+# # Question 3
+# result = solver.query(variables=['N'], evidence={'L': 0})
+# print("P(N|L) :")
+# print(result)
+
+# Question 4
+print("(in)dependencies of variables :")
+print(bayesNet.get_independencies())
