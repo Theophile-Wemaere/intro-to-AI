@@ -42,15 +42,15 @@ bayesNet.check_model()
 
 solver = VariableElimination(bayesNet)
 
-# # Question 2
-# result = solver.query(variables=['N'])
-# print("P(N) :")
-# print(result)
+# Question 2
+result = solver.query(variables=['N'])
+print("P(N) :")
+print(result)
 
-# # Question 3
-# result = solver.query(variables=['N'], evidence={'L': 0})
-# print("P(N|L) :")
-# print(result)
+# Question 3
+result = solver.query(variables=['N'], evidence={'L': 0})
+print("P(N|L) :")
+print(result)
 
 # Question 4
 print("(in)dependencies of variables :")
